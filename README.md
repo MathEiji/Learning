@@ -1,2 +1,2 @@
 # Learning
-Learning HTML5, CSS, JavaScrit
+HTML5, CSS, JavaScrit
