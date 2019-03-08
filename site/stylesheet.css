@@ -1,8 +1,14 @@
-<head>
-
 h1{
   color: blue;
+  border-top-style: dotted;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-width: medium;
+  border-color: red;
 }
-a.button{
-  color: red;
+img{
+  width: 15%;
+  height: auto ;
+  border-radius: 8px;
 }
