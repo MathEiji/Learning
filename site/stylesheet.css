@@ -1,3 +1,8 @@
+a{
+    text-decoration: none;
+    color: red;
+}
+
 h1{
   color: red;
   background-color:#480000;
@@ -13,7 +18,7 @@ h1{
   text-align: center;
 }
 
-#name{
+.name{
   color: red;
   background-color:#480000;
   width: 550px;
@@ -27,8 +32,27 @@ h1{
   display: block;
   font-family: sans-serif;
   font-style: italic;
+}
 
+.website{
+  color: red;
+  background-color:#480000;
+  text-align: center;
+  border-color: red;
+  border-style: solid;
+  border-width: medium;
+  border-radius: 10px;
+  width: 250px;
+  margin: auto;
+  display: block;
+  margin-top: 2px;
+  font-family: sans-serif;
+  font-style: italic;
+}
 
+.website:hover{
+  background-color: #ff7777;
+  color: black;
 }
 
 img{
