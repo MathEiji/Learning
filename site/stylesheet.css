@@ -3,6 +3,10 @@ a{
     color: red;
 }
 
+*{
+  box-sizing: border-box;
+}
+
 h1{
   color: red;
   background-color:#480000;
@@ -11,7 +15,7 @@ h1{
   border-radius: 10px;
   border-width: medium;
   padding: 5px;
-  width: 250px;
+  width: 300px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -21,7 +25,7 @@ h1{
 .name{
   color: red;
   background-color:#480000;
-  width: 550px;
+  width: 450px;
   text-align: center;
   border-style: solid;
   border-width: medium;
@@ -42,7 +46,7 @@ h1{
   border-style: solid;
   border-width: medium;
   border-radius: 10px;
-  width: 250px;
+  width: 200px;
   margin: auto;
   display: block;
   margin-top: 2px;
