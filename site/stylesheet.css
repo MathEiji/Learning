@@ -17,9 +17,9 @@ h1{
   padding: 5px;
   width: 300px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .name{
@@ -33,9 +33,31 @@ h1{
   border-width: 2px;
   border-radius: 5px;
   margin: auto;
+  margin-bottom: 10px;
   display: block;
   font-family: sans-serif;
   font-style: italic;
+}
+
+.responsiveWebsite{
+  color: red;
+  background-color:#480000;
+  text-align: center;
+  border-color: red;
+  border-style: solid;
+  border-width: medium;
+  border-radius: 10px;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 10px;
+  display: block;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+.responsiveWebsite:hover{
+  background-color: #ff7777;
+  color: black;
 }
 
 .website{
@@ -48,6 +70,7 @@ h1{
   border-radius: 10px;
   width: 200px;
   margin: auto;
+  margin-bottom: 10px;
   display: block;
   margin-top: 2px;
   font-family: sans-serif;
@@ -58,6 +81,7 @@ h1{
   background-color: #ff7777;
   color: black;
 }
+
 
 img{
   border-radius: 8px;
