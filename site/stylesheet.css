@@ -1,5 +1,6 @@
 h1{
   color: red;
+  background-color:#480000;
   border-style: solid ;
   border-color: red;
   border-radius: 10px;
@@ -14,19 +15,22 @@ h1{
 
 #name{
   color: red;
+  background-color:#480000;
   width: 550px;
-  text-align: left;
+  text-align: center;
   border-style: solid;
   border-width: medium;
   border-color: red;
   border-width: 2px;
   border-radius: 5px;
+  margin: auto;
+  display: block;
+  font-family: sans-serif;
+  font-style: italic;
 
 
 }
 
 img{
-  /*width: 15%;
-  height: auto ;*/
   border-radius: 8px;
 }
