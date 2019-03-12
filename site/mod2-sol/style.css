@@ -1,18 +1,33 @@
 *{
   box-sizing: border-box;
-
 }
 
+/*Section is being used to create the space between the boxes.
+Padding regulates the space between the boxes.*/
+section{
+  padding: 2%;
+}
 
+/*Draws a line at the border of <div> and changes its color.*/
+div{
+  border: 1px solid black;
+  background-color: #ffffcc
+}
+
+/*Centers the word, changes the font-family and adjusts the bottom margin*/
 h1{
-  margin-bottom: 5em;;
   text-align: center;
+  font-family: serif;
+  margin-bottom: 10px;
 }
-h2{
+
+/*This part of the code manages the format, appearance and position of p.Titulo*/
+.Titulo{
   text-transform: uppercase;
   text-align: center;
+  font-family: serif;
   border: 1px solid black;
-  background-color: #999966;
+  background-color: #ffff75;
   margin-top: 0;
   margin-bottom: 0;
   width: 40%;
@@ -21,20 +36,16 @@ h2{
   float: right;
   top: -0.05em;
   left: 0.05em;
-
 }
 
-section{
-  background-color: gray;
-}
-
-p{
-  border: 1px solid black;
+/*This part of the code manages the format, appearance and position of p.Conteudo*/
+.Conteudo{
+  clear: right;
   text-align: justify;
   width: 75%;
   height: 150px;
-  font-family: Helvetica;
-  color: white;
+  font-family: serif;
+  color: inherit;
   margin-right: 0;
   margin-left: 0;
   position: relative;
@@ -50,7 +61,6 @@ p{
 @media  (min-width:992px){
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
     float: left;
-    border: 1px solid black;
   }
   .col-lg-1{
     width: 8.33%;
@@ -94,7 +104,6 @@ p{
 @media (min-width:768px) and (max-width:991px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
     float: left;
-    border: 1px solid black;
   }
   .col-md-1{
     width: 8.33%;
@@ -138,7 +147,6 @@ p{
 @media (max-width:767px){
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{
     float: left;
-    border: 1px solid black;
   }
   .col-sm-1{
     width: 8.33%;
