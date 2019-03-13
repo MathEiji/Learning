@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: #999999;
+}
+ #navBar{
+   background-color: gray !important;
+ }
+
+#textbox{
+  background-color: gray !important;
+  padding: 25px;
+  margin: 25px;
+}
