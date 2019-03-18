@@ -1,0 +1,66 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  padding: 5rem;
+  background: url(../images/tavernImage.jpg);
+  background-size: cover;
+}
+
+#navBar{
+  background-color: #480000 !important;
+}
+
+.navbar-brand{
+  color: red !important;
+}
+
+#module-button{
+  background-color: red !important;
+}
+
+h1{
+  color: red;
+  background-color:#480000;
+  border-style: solid ;
+  border-color: red;
+  border-radius: 10px;
+  border-width: medium;
+  padding: 5px;
+  width: 300px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#column{
+  border-color: red;
+  border-style: solid;
+  border-width: medium;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+  color: red;
+  background-color: #480000;
+}
+
+#responsiveWebsite{
+  color: red;
+  background-color:#480000;
+  text-align: center;
+  border-color: red;
+  border-style: solid;
+  border-width: medium;
+  border-radius: 10px;
+  width: 200px;
+  margin: auto;
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+#website:hover{
+  background-color: #ff7777;
+  color: black;
+}
