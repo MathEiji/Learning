@@ -1,2 +1,3 @@
 # Learning
-HTML5, CSS, JavaScrit
+Angular from
+https://angular.io/tutorial
