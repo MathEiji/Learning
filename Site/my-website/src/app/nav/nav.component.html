@@ -1,15 +1,19 @@
 <header>
-  <div class="container">
-    <mat-toolbar color="primary">
-      <a>Home</a>
-      <mat-divider [inset]="true"></mat-divider>
-      <a onclick="">Sobre</a>
-      <mat-divider [inset]="true"></mat-divider>
-      <a target="_blank" href="https://github.com/MathEiji">GitHub</a>
-      <mat-divider [inset]="true"></mat-divider>
-      <a target="_blank" href="https://www.linkedin.com/in/matheus-eiji-moriya-dos-santos-094138162">LinkedIn</a>
-      <mat-divider [inset]="true"></mat-divider>
-      <a onclick="">Projetos</a>
+    <mat-toolbar color="primary" class="container">
+        <div class="row">
+            <a mat-button>Home</a>
+            <button mat-button [matMenuTriggerFor]="sobre">Sobre</button>
+                <mat-menu #sobre="matMenu">
+                    <button mat-menu-item>Quem sou?</button>
+                    <button mat-menu-item>Currículo</button>
+                    <button mat-menu-item>Projetos</button>                
+                </mat-menu>
+            <a mat-button target="_blank" href="https://github.com/MathEiji">GitHub</a>
+            <button mat-button [matMenuTriggerFor]="contato">Contato</button>
+                <mat-menu #contato="matMenu">
+                    <a mat-menu-item target="_blank" href="https://www.linkedin.com/in/matheus-eiji-moriya-dos-santos-094138162">LinkedIn</a>
+                    <button mat-menu-item>E-mail</button>
+                </mat-menu>
+        </div>
     </mat-toolbar>
-  </div>
 </header>
