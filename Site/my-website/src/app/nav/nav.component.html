@@ -12,7 +12,7 @@
             <button mat-button [matMenuTriggerFor]="contato">Contato</button>
                 <mat-menu #contato="matMenu">
                     <a mat-menu-item target="_blank" href="https://www.linkedin.com/in/matheus-eiji-moriya-dos-santos-094138162">LinkedIn</a>
-                    <button mat-menu-item>E-mail</button>
+                    <button mat-menu-item (click)="openDialog()">E-mail</button>
                 </mat-menu>
         </div>
     </mat-toolbar>

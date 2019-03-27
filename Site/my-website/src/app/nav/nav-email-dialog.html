@@ -1,1 +1,10 @@
-<h1>matheus.eiji@gmail.com</h1>
+<h1 mat-dialog-title>Contato</h1>
+<mat-dialog-content>
+    <p>
+        matheus.eiji@gmail.com
+    </p>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="copyEmail('matheus.eiji@gmail.com')">Copiar</button>
+    <button mat-button [mat-dialog-close]>Fechar</button>
+</mat-dialog-actions>
