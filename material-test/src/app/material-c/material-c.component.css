@@ -1,0 +1,24 @@
+.macroCard{
+    color: black;
+    background-color:white;
+    width: 80%;
+    margin: auto;
+}
+
+.txtBoxes{
+    text-align: center;
+}
+
+.nameInput{
+    width: 40%;
+}
+
+.emailInput{
+    width: 40%;
+    margin-left: 5%;
+}
+
+.rdoButtons{
+    position: absolute;
+    right: 10px;
+}

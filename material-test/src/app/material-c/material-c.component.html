@@ -1,0 +1,18 @@
+<mat-card color="primary" class="macroCard">
+  <mat-card-title>Usuarios</mat-card-title>
+  <mat-card-content class="txtBoxes">
+    <form [formGroup]="inputBoxes" (ngSubmit)="onSubmit()">
+      <mat-form-field class="nameInput">
+        <input matInput placeholder="Nome" type="text" formControlName="name">
+      </mat-form-field>
+      <mat-form-field class="emailInput">
+          <input matInput placeholder="Email" type="text" formControlName="myEmail" disabled="true">
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-content class="rdoButtons">
+    <mat-radio-button>Masculino</mat-radio-button>
+    <mat-radio-button>Feminino</mat-radio-button>
+  </mat-card-content>
+  <button mat-button type="submit" (click)="onSubmit()">Submit</button>
+</mat-card>
