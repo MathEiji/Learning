@@ -6,17 +6,28 @@
         <input matInput placeholder="Nome" type="text" formControlName="name">
       </mat-form-field>
       <mat-form-field class="emailInput">
-          <input matInput placeholder="Email" type="text" formControlName="myEmail" disabled="true">
+          <input matInput placeholder="Email" type="text" formControlName="myEmail">
       </mat-form-field>
     </form>
   </mat-card-content>
   <mat-form-field class="datePicker">
-    <input matInput [matDatepicker]="myDatepicker" placeholder="Escolha uma data" formControlName="date">
+    <input matInput [matDatepicker]="myDatepicker" placeholder="Escolha uma data" [formControl]="date">
     <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
     <mat-datepicker #myDatepicker></mat-datepicker>
   </mat-form-field>
-    <mat-radio-button class="rdoMan">Masculino</mat-radio-button>
-    <mat-radio-button class="rdoWoman">Feminino</mat-radio-button>
+  <mat-radio-group [formControl]="gender">
+    <mat-radio-button class="rdoMan" value="Masculino">Masculino</mat-radio-button>
+    <mat-radio-button class="rdoWoman" value="Feminino">Feminino</mat-radio-button>
+  </mat-radio-group>
+  <div>
+    <mat-form-field>
+      <mat-select placeholder="Cargo" [formControl]="role">
+        <mat-option value="Gerente">Gerente</mat-option>
+        <mat-option value="Programador Senior">Programador Senior</mat-option>
+        <mat-option value="Estagiario">Estagiario</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
   <div>
     <button mat-button type="submit" (click)="onSubmit()">Submit</button>
   </div>
