@@ -5,9 +5,7 @@
     margin: auto;
 }
 
-.txtBoxes{
-    text-align: center;
-}
+.txtBoxes{ }
 
 .nameInput{
     width: 40%;
@@ -18,7 +16,13 @@
     margin-left: 5%;
 }
 
-.rdoButtons{
-    position: absolute;
-    right: 10px;
+.rdoButtons{ }
+
+.rdoMan, .rdoWoman{
+    margin-right: 50px;
+}
+
+.datePicker{
+    width: 20%;
+    margin-right: 5%;
 }

@@ -11,6 +11,7 @@ export class MaterialCComponent implements OnInit {
   inputBoxes = this.fb.group({
     name: ['', Validators.required],
     myEmail: [''],
+    date: ['', Validators.required],
   });
 
   onSubmit() {
@@ -20,7 +21,7 @@ export class MaterialCComponent implements OnInit {
   ngOnInit() {
     this.inputBoxes.get('name').valueChanges.subscribe(
       createEmail => {
-        if(createEmail != " "){
+        if(createEmail != ""){
           this.inputBoxes.controls.myEmail.setValue(createEmail + '@myemail.com');
         }
         if(createEmail === ""){
