@@ -1,7 +1,7 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
-import { Validators, FormBuilder, FormControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { Validators, FormBuilder } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
-import { DatePipe } from "@angular/common";
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-material-c',
@@ -29,10 +29,10 @@ export class MaterialCComponent implements OnInit {
   ngOnInit() {
     this.inputBoxes.get('name').valueChanges.subscribe(
       createEmail => {
-        if(createEmail !== '') {
+        if (createEmail !== '') {
           this.inputBoxes.controls.myEmail.setValue(createEmail + '@myemail.com');
         }
-        if(createEmail === '') {
+        if (createEmail === '') {
           this.inputBoxes.controls.myEmail.setValue('');
         }
       }

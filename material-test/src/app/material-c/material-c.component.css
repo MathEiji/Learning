@@ -18,11 +18,15 @@
 
 .rdoButtons{ }
 
-.rdoMan, .rdoWoman{
-    margin-right: 50px;
+.rdoMan{
+    margin-right: 5%;
 }
 
 .datePicker{
     width: 20%;
     margin-right: 5%;
+}
+
+.selRole{
+    width: 20%;
 }

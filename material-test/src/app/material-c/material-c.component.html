@@ -20,7 +20,7 @@
     <mat-radio-button class="rdoWoman" value="Feminino">Feminino</mat-radio-button>
   </mat-radio-group>
   <div>
-    <mat-form-field>
+    <mat-form-field class="selRole">
       <mat-select placeholder="Cargo" [formControl]="role">
         <mat-option value="Gerente">Gerente</mat-option>
         <mat-option value="Programador Senior">Programador Senior</mat-option>
@@ -32,3 +32,5 @@
     <button mat-button type="submit" (click)="onSubmit()">Submit</button>
   </div>
 </mat-card>
+
+<app-user-cards></app-user-cards>

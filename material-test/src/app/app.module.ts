@@ -10,22 +10,24 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialCComponent } from './material-c/material-c.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DatePipe } from '@angular/common';
+import { UserCardsComponent } from './user-cards/user-cards.component';
 
 const router: Routes = [
   {path: '' , component: MaterialCComponent},
   {path: 'components', component: MaterialCComponent}
-]
+];
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MaterialCComponent
+    MaterialCComponent,
+    UserCardsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(router,{enableTracing: true}),
+    RouterModule.forRoot(router, {enableTracing: true}),
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule
