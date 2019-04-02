@@ -29,8 +29,20 @@
     </mat-form-field>
   </div>
   <div>
-    <button mat-button type="submit" (click)="onSubmit()">Submit</button>
+    <button mat-button (click)="add(11,)">Submit</button>
   </div>
 </mat-card>
 
-<app-user-cards></app-user-cards>
+<div>
+  <mat-expansion-panel *ngFor="let conta of contas" class="users">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        ID: {{conta.id}} - {{conta.name}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>E-mail: {{conta.email}}</p>
+    <p>Genero: {{conta.gender}}</p>
+    <p>Data de cadastro: {{conta.date}}</p>
+    <p>Cargo: {{conta.role}}</p>
+  </mat-expansion-panel>
+</div>

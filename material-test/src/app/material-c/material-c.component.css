@@ -2,10 +2,11 @@
     color: black;
     background-color:cadetblue;
     width: 80%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
-
-.txtBoxes{ }
 
 .nameInput{
     width: 40%;
@@ -15,8 +16,6 @@
     width: 40%;
     margin-left: 5%;
 }
-
-.rdoButtons{ }
 
 .rdoMan{
     margin-right: 5%;
@@ -29,4 +28,12 @@
 
 .selRole{
     width: 20%;
+}
+
+.users{
+    margin-bottom: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color:gray;
+    width: 80%;
 }
