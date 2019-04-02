@@ -22,15 +22,17 @@ export class MaterialCComponent implements OnInit {
   gender = this.fb.control('', Validators.required);
   role = this.fb.control('', Validators.required);
 
-  add(){
-    const ran: number = 11;
-    let tName: string = this.inputBoxes.controls.name.value.trim();
-    let tEmail: string = this.inputBoxes.controls.myEmail.value.trim();
-    let tDate: string =  this.datePipe.transform(this.date.value, 'dd-MM-yyyy');
-    let tGender: number = this.gender.value;
-    let tRole: string = this.role.value;
-    this.contaService.addConta({ran , tName,tEmail ,tGender , tDate, tRole} as Conta).subscribe(conta => {this.contas.push(conta)});
-  }
+
+  //PROBLEM HERE
+  // add(){
+  //   const ran: number = 11;
+  //   let tName: string = this.inputBoxes.controls.name.value.trim();
+  //   let tEmail: string = this.inputBoxes.controls.myEmail.value.trim();
+  //   let tDate: string =  this.datePipe.transform(this.date.value, 'dd-MM-yyyy');
+  //   let tGender: number = this.gender.value;
+  //   let tRole: string = this.role.value;
+  //   this.contaService.addConta({ran , tName, tEmail ,tGender , tDate, tRole} as Conta).subscribe(conta => {this.contas.push(conta)});
+  // }
 
   createNewEmail(name: string) {
     const re = '.';
