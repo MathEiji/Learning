@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material';
 import { DatePipe } from '@angular/common';
 import { Conta } from '../conta';
 import { ContaService } from '../conta.service';
+import { EmailCreationService } from '../email-creation.service';
 
 @Component({
   selector: 'app-material-c',
@@ -11,41 +12,58 @@ import { ContaService } from '../conta.service';
   styleUrls: ['./material-c.component.css']
 })
 export class MaterialCComponent implements OnInit {
-  constructor(private fb: FormBuilder, private snackBar: MatSnackBar, private datePipe: DatePipe, private contaService: ContaService) { }
+  constructor(private fb: FormBuilder, private snackBar: MatSnackBar, private datePipe: DatePipe,
+              private contaService: ContaService, private emailC: EmailCreationService ) { }
   contas: Conta[];
 
   inputBoxes = this.fb.group({
     name: ['', Validators.required],
-    myEmail: ['', Validators.required], 
+    myEmail: ['', Validators.required],
   });
   date = this.fb.control('', Validators.required);
   gender = this.fb.control('', Validators.required);
   role = this.fb.control('', Validators.required);
 
+  validateEntries() {
+    if (this.inputBoxes.get('name').value == null || this.date.value == null || this.gender.value == null || this.role.value == null){
+      return false;
+    } else {
+      return true;
+    }
+  }
 
-  //PROBLEM HERE
-  // add(){
-  //   const ran: number = 11;
-  //   let tName: string = this.inputBoxes.controls.name.value.trim();
-  //   let tEmail: string = this.inputBoxes.controls.myEmail.value.trim();
-  //   let tDate: string =  this.datePipe.transform(this.date.value, 'dd-MM-yyyy');
-  //   let tGender: number = this.gender.value;
-  //   let tRole: string = this.role.value;
-  //   this.contaService.addConta({ran , tName, tEmail ,tGender , tDate, tRole} as Conta).subscribe(conta => {this.contas.push(conta)});
-  // }
+  cleanInputs() {
+    this.inputBoxes.controls.name.setValue(null);
+    this.inputBoxes.controls.myEmail.setValue(null);
+    this.date.setValue(null);
+    this.gender.setValue(null);
+    this.role.setValue(null);
+  }
 
-  createNewEmail(name: string) {
-    const re = '.';
-    const space = ' ';
-    name = name.replace(space, re);
-    return name.toLocaleLowerCase().trim() + '@myemail.com';
+  add() {
+    const novaConta = {
+        id: null,
+        name: this.inputBoxes.get('name').value,
+        email: this.inputBoxes.get('myEmail').value.trim(),
+        date:   this.datePipe.transform(this.date.value, 'dd-MM-yyyy'),
+        gender:  this.gender.value,
+        role:  this.role.value
+    };
+    console.log(this.date.value)
+    this.contaService.addConta(novaConta).subscribe(conta => {this.contas.push(conta); } );
+    this.cleanInputs();
+  }
+
+  delete(conta: Conta): void {
+    this.contas = this.contas.filter(h => h !== conta);
+    this.contaService.deleteConta(conta).subscribe();
   }
 
   ngOnInit() {
     this.inputBoxes.get('name').valueChanges.subscribe(
       createEmail => {
         if (createEmail !== '') {
-          let temp = this.createNewEmail(createEmail);
+          let temp = this.emailC.createNewEmail(createEmail);
           this.inputBoxes.controls.myEmail.setValue(temp);
         }
         if (createEmail === '') {

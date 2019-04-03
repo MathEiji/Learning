@@ -1,0 +1,27 @@
+<mat-card class="SearchCard">
+  <mat-card-header>
+    <mat-card-title>Search Accounts Page</mat-card-title>
+  </mat-card-header>
+  <div [formGroup]="SearchBar">
+    <mat-form-field class="SearchInput">
+      <input #searchInput matInput type="text" formControlName="SearchInput" (input)="search(searchInput.value)">
+    </mat-form-field>
+  </div>
+</mat-card>
+
+<div>
+    <mat-expansion-panel *ngFor="let conta of contas$ | async" class="users">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            ID: {{conta.id}} - {{conta.name}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>E-mail: {{conta.email}}</p>
+        <p>Genero: {{conta.gender}}</p>
+        <p>Data de cadastro: {{conta.date}}</p>
+        <p>Cargo: {{conta.role}}</p>
+        <mat-action-row>
+          <button mat-raised-button (click)="delete(conta)" color="primary">Delete</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+</div>

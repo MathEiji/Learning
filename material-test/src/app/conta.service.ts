@@ -37,6 +37,28 @@ export class ContaService {
       catchError(this.handleError<Conta>('addedConta')));
   }
 
+  deleteConta(conta: Conta | number): Observable<Conta> {
+    const id = typeof conta === 'number' ? conta : conta.id;
+    const url = `${this.contaUrl}/${id}`;
+
+    return this.http.delete<Conta>(url, httpOptions).pipe(
+      tap(_ => this.log(`deleted conta id=${id}`)),
+      catchError(this.handleError<Conta>('deletedConta'))
+    );
+  }
+
+  searchConta(term: string): Observable<Conta[]> {
+    if(!term.trim()){
+      // if not search term, return empty hero array.
+      return of([]);
+    }
+    let url = `${this.contaUrl}/?name=${term}`;
+    return this.http.get<Conta[]>(url).pipe(
+      tap(_ => this.log(`founde contas matching "${term}"`)),
+      catchError(this.handleError<Conta[]>('searchContas', []))
+    );
+  }
+
 
 
 

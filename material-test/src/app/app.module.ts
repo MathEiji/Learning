@@ -13,10 +13,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { SearchComponent } from './search/search.component';
 
 
 const router: Routes = [
   {path: '' , component: MaterialCComponent},
+  {path: 'search', component: SearchComponent},
   {path: 'components', component: MaterialCComponent}
 ];
 
@@ -24,7 +26,8 @@ const router: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    MaterialCComponent
+    MaterialCComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

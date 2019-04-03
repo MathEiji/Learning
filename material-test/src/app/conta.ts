@@ -2,7 +2,7 @@
     id: number;
     name: string;
     email: string;
-    gender: number;
+    gender: string;
     date: string;
     role: string;
 }
