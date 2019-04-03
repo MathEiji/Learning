@@ -17,9 +17,14 @@ export class SearchComponent implements OnInit {
   SearchBar = this.fb.group({
     SearchInput: ['', Validators.required]
   });
+  contas: Conta[];
 
   search(term: string): void {
     this.searchAccounts.next(term);
+  }
+  delete(conta: Conta): void {
+    this.contas = this.contas.filter(h => h !== conta);
+    this.contaService.deleteConta(conta).subscribe();
   }
 
   ngOnInit() {

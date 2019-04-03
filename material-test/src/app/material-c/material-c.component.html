@@ -6,7 +6,7 @@
         <input matInput placeholder="Nome" type="text" formControlName="name" required>
       </mat-form-field>
       <mat-form-field class="emailInput">
-          <input matInput placeholder="Email" type="text" formControlName="myEmail">
+          <input matInput placeholder="Email" type="text" formControlName="myEmail" required>
       </mat-form-field>
     </form>
   </mat-card-content>
@@ -28,12 +28,9 @@
       </mat-select>
     </mat-form-field>
   </div>
-  <div *ngIf="validateEntries(); else notValid">
-    <button mat-button (click)="add()">Submit</button>
+  <div>
+    <button mat-button (click)="add()" [disabled]="!inputBoxes.valid || !role.valid || !date.valid">Submit</button>
   </div>
-  <ng-template #notValid>
-    <button mat-button disabled>Submit</button>
-  </ng-template>
 </mat-card>
 
 <div>
@@ -51,4 +48,7 @@
       <button mat-raised-button (click)="delete(conta)" color="primary">Delete</button>
     </mat-action-row>
   </mat-expansion-panel>
+</div>
+<div>
+  <button mat-fab color="primary" routerLink="/search" [disabled]="f">Search</button>
 </div>

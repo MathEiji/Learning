@@ -24,14 +24,6 @@ export class MaterialCComponent implements OnInit {
   gender = this.fb.control('', Validators.required);
   role = this.fb.control('', Validators.required);
 
-  validateEntries() {
-    if (this.inputBoxes.get('name').value == null || this.date.value == null || this.gender.value == null || this.role.value == null){
-      return false;
-    } else {
-      return true;
-    }
-  }
-
   cleanInputs() {
     this.inputBoxes.controls.name.setValue(null);
     this.inputBoxes.controls.myEmail.setValue(null);
