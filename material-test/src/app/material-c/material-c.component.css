@@ -37,3 +37,10 @@
     margin-left: auto;
     width: 80%;
 }
+
+.btnSearch{
+    position:fixed;
+    bottom: 3%;
+    right: 3%;
+    
+}

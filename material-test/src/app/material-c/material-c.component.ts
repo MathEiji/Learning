@@ -33,7 +33,7 @@ export class MaterialCComponent implements OnInit {
   }
 
   add() {
-    const novaConta = {
+    let novaConta = {
         id: null,
         name: this.inputBoxes.get('name').value,
         email: this.inputBoxes.get('myEmail').value.trim(),

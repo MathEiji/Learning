@@ -7,7 +7,7 @@ import { Conta } from './conta';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const contas = [
+    let contas = [
       {id: 1, name: 'Lucas Gomes', email: 'lucasg@mymail.com', gender: 'Masculino', date: '02-04-2019', role: 'Gerente'},
       {id: 2, name: 'Matheus Eiji Moriya', email: 'matheus.eiji@mymail.com', gender: 'Masculino', date: '01-04-2019', role: 'Gerente'}
     ];
